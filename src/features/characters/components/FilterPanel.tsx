@@ -56,7 +56,7 @@ export const FilterPanel = ({ onClickClose }: FilterProps) => {
     <RemoveScroll className="md:overflow-y-auto">
       <div
         ref={refElement}
-        className="animate-fade-in flex flex-col gap-2 md:border md:top-16 md:border-gray-100 dark:border-gray-500 md:rounded-lg fixed left-0 top-0  md:shadow-xl w-full h-dvh z-50 bg-background p-6 md:absolute md:h-auto"
+        className="animate-fade-in flex flex-col gap-5 md:border md:top-16 md:border-gray-100 dark:border-gray-500 md:rounded-lg fixed left-0 top-0  md:shadow-xl w-full h-dvh z-50 bg-background p-6 md:absolute md:h-auto"
       >
         <header className="flex md:hidden">
           <div className="flex-grow-[0.5]">

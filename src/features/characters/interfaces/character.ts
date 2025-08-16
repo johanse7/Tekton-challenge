@@ -28,15 +28,3 @@ export interface CharacterListParams {
   species?: string;
 }
 
-export interface CharacterDetail extends Character {
-  origin: {
-    name: string;
-    url: string;
-  };
-  location: {
-    name: string;
-    url: string;
-  };
-  image: string;
-  episode: string[];
-}

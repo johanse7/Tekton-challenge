@@ -33,7 +33,7 @@ const CharacterCardSkeleton = () => {
       </CardHeader>
 
       <CardContent className="flex flex-col items-center justify-center py-6">
-        <Skeleton className="w-50 h-50 rounded-2xl" />
+        <Skeleton className="w-75 h-75 md:w-70 md:h-70 rounded-2xl" />
       </CardContent>
 
       <CardFooter className="flex flex-col gap-2 items-start w-full">

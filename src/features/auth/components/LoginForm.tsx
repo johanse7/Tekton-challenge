@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import clsx from "clsx";
 import { useActionState } from "react";
 import { useNavigate } from "react-router";
-import { useAuthStore } from "../store/authStore";
+import { useAuthStore } from "../store/useAuthStore";
 
 export const LoginForm = (props: React.ComponentProps<"div">) => {
   const { className, ...rest } = props;
@@ -23,7 +23,7 @@ export const LoginForm = (props: React.ComponentProps<"div">) => {
         return { error: response.errorMessage };
       }
 
-      navigate("/dashboard", { replace: true });
+      navigate("/", { replace: true });
       return { success: true };
     }
   });

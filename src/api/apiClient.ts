@@ -1,5 +1,5 @@
 // api/axiosInstance.ts
-import { useAuthStore } from "@/features/auth/store/authStore";
+import { useAuthStore } from "@/features/auth/store/useAuthStore";
 import axios from "axios";
 
 const api = axios.create({
