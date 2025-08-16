@@ -42,7 +42,7 @@ export const Detail = () => {
           <img
             src={image}
             alt={name}
-            className="w-full h-80 rounded-lg object-cover"
+            className=" rounded-lg object-cover"
           />
           <LikeButton
             characterId={characterId}
