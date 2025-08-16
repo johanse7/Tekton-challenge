@@ -5,6 +5,7 @@ export interface Character {
   species: string;
   type: string;
   gender: string;
+  image: string;
 }
 
 export type StatusType = "Alive" | "Dead" | "Unknown";
@@ -27,4 +28,3 @@ export interface CharacterListParams {
   gender?: string;
   species?: string;
 }
-

@@ -7,7 +7,7 @@ export const CharactersPage = () => {
   return (
     <>
       <Title>Character list</Title>
-      <Search className="mt-4" />
+      <Search className="my-4" />
       <CurrentFilters />
       <CharacterList />
     </>

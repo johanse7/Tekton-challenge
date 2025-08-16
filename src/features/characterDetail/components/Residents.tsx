@@ -39,7 +39,7 @@ export const Residents = ({ residents = [] }: ResidentsProps) => {
           const { id, name, image } = character;
           return (
             <li key={`character-${id}`} className="flex items-center gap-2">
-              <Link to={`/characters/${id}`} title={name}>
+              <Link to={`/character/${id}`} title={name}>
                 <img
                   src={image}
                   alt={`Portrait of ${name}`}

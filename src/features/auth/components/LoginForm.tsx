@@ -7,27 +7,37 @@ import { useActionState } from "react";
 import { useNavigate } from "react-router";
 import { useAuthStore } from "../store/useAuthStore";
 
+type FormState = {
+  success: boolean;
+  error?: string;
+};
+
 export const LoginForm = (props: React.ComponentProps<"div">) => {
   const { className, ...rest } = props;
 
   const navigate = useNavigate();
   const login = useAuthStore((state) => state.login);
 
-  const [formState, formAction] = useActionState((_, formData: FormData) => {
-    const email = formData.get("email")?.toString();
-    const password = formData.get("password")?.toString();
+  const [formState, formAction] = useActionState<FormState, FormData>(
+    (_, formData) => {
+      const email = formData.get("email")?.toString();
+      const password = formData.get("password")?.toString();
 
-    if (email && password) {
+      if (!email || !password) {
+        return { success: false, error: "Email and password are required" };
+      }
+
       const response = login(email, password);
+
       if (response.errorMessage) {
-        return { error: response.errorMessage };
+        return { success: false, error: response.errorMessage };
       }
 
       navigate("/", { replace: true });
       return { success: true };
-    }
-  });
-
+    },
+    { success: false }
+  );
   return (
     <Card className={clsx("overflow-hidden p-0", className)} {...rest}>
       <CardContent className="grid p-0">

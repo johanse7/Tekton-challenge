@@ -9,9 +9,8 @@ export interface CharacterDetail extends Character {
     name: string;
     url: string;
   };
-  image: string;
-  episode: string[];
 
+  episode: string[];
 }
 
 export interface Location {
