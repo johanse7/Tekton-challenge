@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 export const DetailSkeleton = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-3 gap-5 py-8">
-      <Skeleton className="w-full h-96  rounded-lg" />
+      <Skeleton className="w-full h-80  rounded-lg" />
       <div className="flex flex-col gap-2 items-start md:col-span-2">
         <Skeleton className="h-6 w-20" />
         <Skeleton className="h-5 w-32" />
