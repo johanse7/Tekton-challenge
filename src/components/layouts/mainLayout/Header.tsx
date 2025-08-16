@@ -12,7 +12,7 @@ export const Header = () => {
   const [openSidebarMobile, setOpenSidebarMobile] = useToggle();
 
   return (
-    <header className="w-full p-6 shadow flex items-center justify-between bg-accent">
+    <header className="w-full p-6 shadow flex items-center justify-between bg-accent fixed z-50 top-0">
       <Link to="/characters" className="text-lg font-semibold">
         Rick and Morty
       </Link>
