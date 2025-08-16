@@ -1,3 +1,4 @@
+import { ErrorHandler } from "@/components/ui/ErrorHandler";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router";
@@ -35,12 +36,7 @@ export const CharacterList = () => {
 
   if (isLoading) return <CharacterListSkeleton />;
 
-  if (isError)
-    return (
-      <p className="text-gray-600">
-        {error instanceof Error ? error.message : "Something went wrong"}
-      </p>
-    );
+  if (isError) return <ErrorHandler error={error} />;
 
   return (
     <>

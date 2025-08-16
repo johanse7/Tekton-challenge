@@ -34,9 +34,9 @@ export const DarkMode = () => {
       onClick={handleClickChangeTheme}
     >
       {!isDarkMode ? (
-        <MdDarkMode size={30} />
+        <MdDarkMode size={25} />
       ) : (
-        <MdOutlineLightMode size={30} />
+        <MdOutlineLightMode size={25} />
       )}
     </Button>
   );

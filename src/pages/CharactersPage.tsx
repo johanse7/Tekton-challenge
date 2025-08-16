@@ -1,14 +1,15 @@
+import { Title } from "@/components/ui/Title";
 import { CharacterList } from "@/features/characters/components/CharacterList";
 import { CurrentFilters } from "@/features/characters/components/CurrentFilters";
 import { Search } from "@/features/characters/components/Search";
 
-export const DashboardPage = () => {
+export const CharactersPage = () => {
   return (
-    <div className="flex flex-col gap-6">
-      <h1 className="text-2xl font-bold">Character list</h1>
-      <Search className="mt-4 " />
+    <>
+      <Title>Character list</Title>
+      <Search className="mt-4" />
       <CurrentFilters />
       <CharacterList />
-    </div>
+    </>
   );
 };

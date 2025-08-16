@@ -7,7 +7,7 @@ interface Props {
 
 export const PublicRoute = ({ isAuthenticated, children }: Props) => {
   if (isAuthenticated) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return children;
