@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { LogoutButton } from "@/features/auth/components/LogoutButton";
+import { UserAvatar } from "@/features/profile/components/UserAvatar";
 import { useToggle } from "@/hooks";
 import { IoMdMenu } from "react-icons/io";
 import { Link } from "react-router";
@@ -11,13 +12,13 @@ export const Header = () => {
   const [openSidebarMobile, setOpenSidebarMobile] = useToggle();
 
   return (
-    <header className="w-full h-16 p-6 shadow flex items-center justify-between bg-accent">
+    <header className="w-full p-6 shadow flex items-center justify-between bg-accent">
       <Link to="/characters" className="text-lg font-semibold">
         Rick and Morty
       </Link>
       <Navbar />
-      <Sidebar isOPen={openSidebarMobile} onClose={setOpenSidebarMobile} />
-      <div className="flex gap-1">
+      <Sidebar isOpen={openSidebarMobile} onClose={setOpenSidebarMobile} />
+      <div className="flex gap-1 items-center">
         <Button
           size="icon"
           variant="ghost"
@@ -28,6 +29,7 @@ export const Header = () => {
         </Button>
         <LogoutButton className="hidden md:flex" />
         <DarkMode />
+        <UserAvatar className="hidden md:flex" />
       </div>
     </header>
   );

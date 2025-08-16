@@ -4,7 +4,7 @@ import { TbLogout2 } from "react-icons/tb";
 import { useAuthStore } from "../store/useAuthStore";
 
 type LogoutButtonProps = {
-  className: string;
+  className?: string;
 };
 
 export const LogoutButton = ({ className }: LogoutButtonProps) => {

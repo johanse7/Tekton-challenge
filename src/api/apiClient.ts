@@ -1,6 +1,6 @@
 // api/axiosInstance.ts
 import { useAuthStore } from "@/features/auth/store/useAuthStore";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 const api = axios.create({
   baseURL: "https://rickandmortyapi.com/api",
@@ -15,7 +15,7 @@ api.interceptors.request.use((config) => {
 
 api.interceptors.response.use(
   (response) => response,
-  (error) => {
+  (error: AxiosError) => {
     const status = error.response?.status;
     let message = "Unexpected error. Please try again.";
 

@@ -3,14 +3,24 @@ import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 const fakeUsers = [
-  { email: "rick@rick.com", name: "Rick Sanchez", password: "rick" },
-  { email: "morty@morty.com", name: "Morty Smith", password: "morty" },
+  {
+    email: "rick@rick.com",
+    name: "Rick Sanchez",
+    password: "rick",
+    avatar: "https://robohash.org/rick@rick.com?set=set2",
+  },
+  {
+    email: "morty@morty.com",
+    name: "Morty Smith",
+    password: "morty",
+    avatar: "https://robohash.org/morty@morty.com?set=set2",
+  },
 ];
-
 type User = {
   email: string;
   name: string;
   token: string;
+  avatar: string;
 };
 
 type LoginResponse = {
@@ -41,6 +51,7 @@ export const useAuthStore = create<State>()(
         const userLogged = {
           name: foundUser.name,
           email: foundUser.email,
+          avatar: foundUser.avatar,
           token,
         };
 

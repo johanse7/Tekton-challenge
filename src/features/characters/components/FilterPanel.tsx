@@ -29,9 +29,10 @@ export const FilterPanel = ({ onClickClose }: FilterProps) => {
     setFilters((filter) => {
       const currentValue = filter?.[filterName as keyof typeof filter];
       if (currentValue === value) {
-        const { [filterName as keyof typeof filter]: _, ...rest } = filter;
+        const newFilter = structuredClone(filter);
+        delete newFilter[filterName as keyof typeof filter];
         return {
-          ...rest,
+          ...newFilter,
         };
       }
       return {
