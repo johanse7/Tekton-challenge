@@ -46,7 +46,7 @@ export const Detail = () => {
           />
           <LikeButton
             characterId={characterId}
-            className="absolute right-1 top-1"
+            className="absolute right-2 top-1 bg-accent dark:bg-accent/70 dark:hover:bg-accent/70"
           />
         </div>
         <div className="flex flex-col gap-2 items-start md:col-span-2">
