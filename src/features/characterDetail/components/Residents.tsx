@@ -22,7 +22,7 @@ export const Residents = ({ residents = [] }: ResidentsProps) => {
       <p className="text-xl font-bold text-gray-700 dark:text-gray-300">
         Residents in the same location
       </p>
-      <ul className="flex flex-wrap gap-4">
+      <ul className="flex flex-wrap gap-2">
         {results.map((result, index) => {
           if (result.isLoading) {
             return (
@@ -38,7 +38,7 @@ export const Residents = ({ residents = [] }: ResidentsProps) => {
 
           const { id, name, image } = character;
           return (
-            <li key={`character-${id}`} className="flex items-center gap-2">
+            <li key={`character-${id}`}>
               <Link to={`/character/${id}`} title={name}>
                 <img
                   src={image}
