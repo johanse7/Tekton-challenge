@@ -23,7 +23,7 @@ export const Location = ({ locationUrl }: LocationProps) => {
 
   return (
     <article className="flex flex-col gap-2 mt-3">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gdeap-2">
         <SlLocationPin size={20} />
         <p className="text-lg font-bold text-gray-700 dark:text-gray-300 ">
           {name}
@@ -35,7 +35,7 @@ export const Location = ({ locationUrl }: LocationProps) => {
       <p className="text-gray-600 text-sm dark:text-gray-400">
         <span className="font-semibold">Dimension:</span> {dimension}
       </p>
-      <div className="mt-10">
+      <div className="mt-5">
         <Residents residents={residents} />
       </div>
     </article>
