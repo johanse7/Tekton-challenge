@@ -22,8 +22,8 @@ export const Location = ({ locationUrl }: LocationProps) => {
   const { name, type, dimension, residents } = location;
 
   return (
-    <article className="flex flex-col gap-2 mt-3">
-      <div className="flex items-center gdeap-2">
+    <article className="flex flex-col gap-2 mt-3 md:mt-5">
+      <div className="flex items-center gap-2">
         <SlLocationPin size={20} />
         <p className="text-lg font-bold text-gray-700 dark:text-gray-300 ">
           {name}

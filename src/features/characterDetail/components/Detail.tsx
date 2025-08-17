@@ -36,8 +36,8 @@ export const Detail = () => {
   } = character;
 
   return (
-    <>
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-7 py-8 animate-fade-in">
+    <section className="py-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-7 animate-fade-in">
         <div className="relative">
           <img
             src={image}
@@ -66,8 +66,8 @@ export const Detail = () => {
             </p>
           )}
         </div>
-      </section>
+      </div>
       <Location locationUrl={location?.url} />
-    </>
+    </section>
   );
 };
