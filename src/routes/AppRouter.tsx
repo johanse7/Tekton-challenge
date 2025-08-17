@@ -1,3 +1,4 @@
+import ScrollToTop from "@/components/ui/ScrollToTop";
 import { DetailPage } from "@/pages/DetailPage";
 import { FavoritesPage } from "@/pages/FavoritesPage";
 import { ProfilePage } from "@/pages/ProfilePage";
@@ -15,6 +16,7 @@ export const AppRouter = () => {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/auth" element={<AuthLayout />}>
           <Route

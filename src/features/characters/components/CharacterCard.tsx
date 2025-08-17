@@ -18,7 +18,7 @@ export const CharacterCard = (props: CharacterCardProps) => {
   const { name, gender, species, status, image, type, id } = character ?? {};
 
   return (
-    <Link to={`/character/${id}`} preventScrollReset>
+    <Link to={`/character/${id}`} preventScrollReset={false}>
       <Card className="w-full hover:cursor-pointer hover:shadow-md transition-all duration-200 h-full">
         <CardHeader className="flex flex-row items-center justify-between pb-2 px-3">
           <div className="text-base font-semibold text-gray-500">{name}</div>
