@@ -1,10 +1,10 @@
 import { ErrorHandler } from "@/components/ui/ErrorHandler";
 import { useWindowVirtualizer } from "@tanstack/react-virtual";
-import { useIntersectionObserver, useMediaQuery } from "@uidotdev/usehooks";
+import { useMediaQuery } from "@uidotdev/usehooks";
 import clsx from "clsx";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useSearchParams } from "react-router";
-import { useGetCharacters } from "../hooks/useGetCharacters";
+import { useGetInfinityCharacters } from "../hooks/useGetInfinityCharacters";
 import type { CharacterListParams } from "../interfaces/character";
 import { COLUMNS_RESPONSIVE } from "../utils/constans";
 import { CharacterCard } from "./CharacterCard";
@@ -14,29 +14,18 @@ export const CharacterList = () => {
   const [searchParams] = useSearchParams();
 
   const parentRef = useRef<HTMLDivElement>(null);
-  const [loadMoreRef, entry] = useIntersectionObserver({
-    threshold: 0,
-    root: null,
-    rootMargin: "0px",
-  });
 
   const params = Object.fromEntries(searchParams) as CharacterListParams;
 
   const {
+    loadMoreRef,
     data,
-    fetchNextPage,
     isFetchingNextPage,
     hasNextPage,
     isError,
     error,
     status,
-  } = useGetCharacters(params);
-
-  useEffect(() => {
-    if (entry?.isIntersecting && hasNextPage && !isFetchingNextPage) {
-      fetchNextPage();
-    }
-  }, [entry?.isIntersecting, hasNextPage, isFetchingNextPage, fetchNextPage]);
+  } = useGetInfinityCharacters(params);
 
   const allCharacters = data?.pages.flatMap(({ results }) => results) ?? [];
 
@@ -72,9 +61,6 @@ export const CharacterList = () => {
         {rowVirtualizer.getVirtualItems().map((virtualRow) => {
           const startIndex = virtualRow.index * columns;
 
-          const isLoaderRow = virtualRow.index >= allCharacters.length;
-          if (isLoaderRow) console.log(isLoaderRow);
-
           const rowItems = allCharacters.slice(
             startIndex,
             startIndex + columns
@@ -101,11 +87,9 @@ export const CharacterList = () => {
                   "grid-cols-3": columns === COLUMNS_RESPONSIVE.DESKTOP,
                 })}
               >
-                {isLoaderRow
-                  ? "loading"
-                  : rowItems.map((character) => (
-                      <CharacterCard key={character.id} character={character} />
-                    ))}
+                {rowItems.map((character) => (
+                  <CharacterCard key={character.id} character={character} />
+                ))}
               </div>
             </li>
           );
