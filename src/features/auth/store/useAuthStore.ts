@@ -61,6 +61,6 @@ export const useAuthStore = create<State>()(
       },
       logout: () => set({ user: null }),
     }),
-    { name: "auth-storage", storage: createJSONStorage(() => sessionStorage) }
+    { name: "auth-storage", storage: createJSONStorage(() => localStorage) }
   )
 );
