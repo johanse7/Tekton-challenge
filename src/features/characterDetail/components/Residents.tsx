@@ -27,7 +27,10 @@ export const Residents = ({ residents = [] }: ResidentsProps) => {
           if (result.isLoading) {
             return (
               <li key={`loading-${index}`} className="text-gray-500">
-                <Skeleton className="w-11 h-11 rounded-full" />
+                <Skeleton
+                  className="w-11 h-11 rounded-full"
+                  data-testid="skeleton"
+                />
               </li>
             );
           }

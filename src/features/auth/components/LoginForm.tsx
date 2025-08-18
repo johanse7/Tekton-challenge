@@ -41,7 +41,11 @@ export const LoginForm = (props: React.ComponentProps<"div">) => {
   return (
     <Card className={clsx("overflow-hidden p-0", className)} {...rest}>
       <CardContent className="grid p-0">
-        <form className="p-6 md:p-8" action={formAction}>
+        <form
+          className="p-6 md:p-8"
+          action={formAction}
+          aria-label="login form"
+        >
           <div className="flex flex-col gap-6">
             <div className="flex flex-col items-center text-center">
               <h1 className="text-2xl font-bold">Welcome back</h1>
@@ -52,6 +56,7 @@ export const LoginForm = (props: React.ComponentProps<"div">) => {
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
               <Input
+                id="email"
                 name="email"
                 type="email"
                 placeholder="m@example.com"
@@ -60,7 +65,7 @@ export const LoginForm = (props: React.ComponentProps<"div">) => {
             </div>
             <div className="grid gap-2">
               <Label htmlFor="email">Password</Label>
-              <Input name="password" type="password" required />
+              <Input id="password" name="password" type="password" required />
             </div>
 
             <Button type="submit" className="w-full">

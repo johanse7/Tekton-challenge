@@ -1,21 +1,8 @@
 import { create } from "zustand";
 
 import { createJSONStorage, persist } from "zustand/middleware";
+import { fakeUsers } from "../utils";
 
-const fakeUsers = [
-  {
-    email: "rick@rick.com",
-    name: "Rick Sanchez",
-    password: "rick",
-    avatar: "https://robohash.org/rick@rick.com?set=set2",
-  },
-  {
-    email: "morty@morty.com",
-    name: "Morty Smith",
-    password: "morty",
-    avatar: "https://robohash.org/morty@morty.com?set=set2",
-  },
-];
 type User = {
   email: string;
   name: string;

@@ -19,6 +19,7 @@ export const CharacterStatus = ({ status }: CharacterStatusProps) => {
           `inline-block  w-2 h-2 text-xs font-semibold text-white rounded-full`,
           statusColors[status] || "bg-gray-500"
         )}
+        role="presentation"
       />
       <span className="text-sm font-medium text-gray-500">{status}</span>
     </div>
