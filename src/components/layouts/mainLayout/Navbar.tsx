@@ -9,7 +9,7 @@ type NavbarProps = {
 
 export const Navbar = ({ className, onClick }: NavbarProps) => {
   return (
-    <nav className={cn("hidden md:flex items-center gap-4", className)}>
+    <nav className={cn("hidden lg:flex items-center gap-4", className)}>
       {MENU.map(({ label, icon, href }, index) => (
         <NavLink
           key={`menu-${label}-${index}`}

@@ -25,9 +25,14 @@ export const FILTERS: Partial<
   ],
 } as const;
 
-
 export const INITIAL_STATE_FILTERS: Partial<Record<FilterType, string>> = {
   status: "",
   species: "",
   gender: "",
+};
+
+export const COLUMNS_RESPONSIVE = {
+  MOBILE: 1,
+  TABLET: 2,
+  DESKTOP: 3,
 };

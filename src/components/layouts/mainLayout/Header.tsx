@@ -27,9 +27,9 @@ export const Header = () => {
         >
           <IoMdMenu size={25} />
         </Button>
-        <LogoutButton className="hidden md:flex" />
+        <LogoutButton className="hidden lg:flex" />
         <DarkMode />
-        <UserAvatar className="hidden md:flex" />
+        <UserAvatar className="hidden lg:flex" />
       </div>
     </header>
   );
