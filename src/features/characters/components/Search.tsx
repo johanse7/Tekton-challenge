@@ -43,13 +43,17 @@ export const Search = ({
         Email
       </Label>
       <Input
+        id="search"
         name="search"
         placeholder="Search or filter characters"
         className="block w-full  h-10 rounded-lg  py-[9px] pl-10 text-sm outline-2 bg-gray-100"
         onChange={handleSearch}
         defaultValue={searchTerm.get("name") ?? ""}
       />
-      <GoSearch className="absolute left-3 top-1/2 h-[20px] w-[20px] -translate-y-1/2 text-gray-400 peer-focus:text-gray-900" />
+      <GoSearch
+        aria-hidden="true"
+        className="absolute left-3 top-1/2 h-[20px] w-[20px] -translate-y-1/2 text-gray-400 peer-focus:text-gray-900"
+      />
       <Button
         className="absolute right-2 top-0.5 cursor-pointer hover:dark:bg-transparent"
         variant="ghost"

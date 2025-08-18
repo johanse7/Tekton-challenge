@@ -5,7 +5,10 @@ export const FavoriteListSkeleton = () => {
   const skeletonItems = Array.from({ length: 12 });
 
   return (
-    <section className="columns-2 md:columns-3 lg:columns-4 gap-5 py-10 md:py-20">
+    <section
+      className="columns-2 md:columns-3 lg:columns-4 gap-5 py-10 md:py-20"
+      data-testid="favorite-list-skeleton"
+    >
       {skeletonItems.map((_, index) => (
         <article
           key={index}

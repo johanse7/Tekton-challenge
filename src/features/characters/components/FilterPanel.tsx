@@ -79,6 +79,7 @@ export const FilterPanel = ({ onClickClose }: FilterProps) => {
                   {values.map(({ label, value }) => (
                     <Button
                       key={label}
+                      name={label}
                       variant="ghost"
                       className={clsx(
                         "py-[12px] px-[10px] rounded-lg border dark:text-gray-300 border-gray-500 min-w-24 md:min-w-20 hover:bg-primary-100 hover:bg-gray-300 hover:dark:bg-gray-700 ",
