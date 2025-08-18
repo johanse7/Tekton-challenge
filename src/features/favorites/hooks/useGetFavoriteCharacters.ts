@@ -4,7 +4,6 @@ import { useFavoriteCharactersStore } from "../store";
 
 export const useGetFavoriteCharacters = () => {
   const favorites = useFavoriteCharactersStore((state) => state.favorites);
-  debugger;
 
   return useQuery({
     queryKey: ["favorite-characters", favorites],
