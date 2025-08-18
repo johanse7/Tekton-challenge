@@ -53,7 +53,7 @@ export const CharacterList = () => {
 
   const rowVirtualizer = useWindowVirtualizer({
     count: rows,
-    estimateSize: () => 570,
+    estimateSize: () => 600,
     overscan: 5,
     scrollMargin: parentRef.current?.offsetTop,
   });
