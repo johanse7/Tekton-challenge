@@ -3,7 +3,8 @@ import { getFavoritesCharacters } from "../services/getFavoritesCharacters";
 import { useFavoriteCharactersStore } from "../store";
 
 export const useGetFavoriteCharacters = () => {
-  const { favorites } = useFavoriteCharactersStore((state) => state);
+  const favorites = useFavoriteCharactersStore((state) => state.favorites);
+  debugger;
 
   return useQuery({
     queryKey: ["favorite-characters", favorites],

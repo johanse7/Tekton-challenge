@@ -20,7 +20,6 @@ type User = {
   email: string;
   name: string;
   token: string;
-  avatar: string;
 };
 
 type LoginResponse = {
