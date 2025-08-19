@@ -94,7 +94,8 @@ npm run dev
 
 ## Live Demo 🌐
 
-You can view the live demo at: [Url App](https://tekton-challenge.vercel.app/auth)
+You can view the live demo at: [Live Demo 🌐](https://tekton-challenge.vercel.app/auth)
+
 
 
 👤 Test Users
