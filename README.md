@@ -17,16 +17,20 @@ This is a web application that interacts with a character list, likely from the 
 ## Key Features
 
 * **Authentication:** A simple login system with predefined user credentials.
-  !(uploaded:image_8c5627.png-42f865ea-65ed-4728-9ee2-8285717e4bdb)
+ <img width="1014" height="550" alt="image" src="https://github.com/user-attachments/assets/3fd7b5de-a500-445c-86c9-3fb69fd56db3" />
+
 
 * **Infinite Scroll:** Efficiently loads character data as the user scrolls, improving performance.
-  !(uploaded:image_8c592a.jpg-7cec5daf-cff8-4541-bfeb-da6714bbad5f)
+<img width="1854" height="924" alt="image" src="https://github.com/user-attachments/assets/2c7d50c6-cb9b-42c1-b577-83546994a574" />
+
 
 * **Character Filtering:** Allows users to filter the character list by status, species, and gender.
-  ![Image showing a filter dropdown with options for status, species, and gender](uploaded:image_8c594c.png-4263484a-fd14-4441-974f-ccdfc583370d)
+<img width="1854" height="924" alt="image" src="https://github.com/user-attachments/assets/1980b34c-8876-4d5c-aa01-72d50614fbfd" />
+
 
 * **User Profile:** A dedicated page to view user details.
-  !(uploaded:image_8c596b.png-ed17ca3d-4682-4dd4-876f-15e68f29965d)
+<img width="1854" height="924" alt="image" src="https://github.com/user-attachments/assets/1e410ed9-3593-4606-af0c-ec044949d2fe" />
+
 
 ## Relevant Technologies
 
@@ -69,3 +73,7 @@ To start the development server, run the following command:
 
 ```bash
 npm run dev
+
+## Live Demo 🌐
+
+You can view the live demo at: https://addi-crm-nine.vercel.app
