@@ -1,69 +1,55 @@
-# React + TypeScript + Vite
+# Tekton Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application built with Vite, showcasing several key features and modern development practices.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* [Project Overview](#project-overview)
+* [Key Features](#key-features)
+* [Relevant Technologies](#relevant-technologies)
+* [Getting Started](#getting-started)
+* [User Login](#user-login)
 
-## Expanding the ESLint configuration
+## Project Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This is a web application that interacts with a character list, likely from the Rick and Morty API, and provides a user profile view. The application includes a login screen and a dashboard with a character list that features infinite scrolling and filtering.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Key Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+* **Authentication:** A simple login system with predefined user credentials.
+  !(https://placehold.co/1000x500/000000/FFFFFF?text=Login%20Page)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* **Infinite Scroll:** Efficiently loads character data as the user scrolls, improving performance.
+  !(https://placehold.co/1000x500/000000/FFFFFF?text=Character%20List)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* **Character Filtering:** Allows users to filter the character list by status, species, and gender.
+  ![Image showing a filter dropdown with options for status, species, and gender](https://placehold.co/1000x500/000000/FFFFFF?text=Filter%20Options)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* **User Profile:** A dedicated page to view user details.
+  !(https://placehold.co/1000x500/000000/FFFFFF?text=User%20Profile)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Relevant Technologies
+
+This project uses a modern web development stack. The most relevant libraries for its functionality are:
+
+* **Vite:** A fast build tool that provides a rapid development environment.
+* **React:** The core JavaScript library for building the user interface.
+* **Zustand:** A small, fast, and scalable state-management solution. It's used to manage the application's global state, such as user authentication and data.
+* **React Query (`@tanstack/react-query`):** A powerful library for fetching, caching, and updating asynchronous data in React. It's crucial for managing the state of your API calls efficiently.
+* **React Virtual (`@tanstack/react-virtual`):** A headless utility for virtualizing large lists and tabular data. This library is key to the performance improvement you mentioned for the infinite scroll feature.
+* **Tailwind CSS:** A utility-first CSS framework used for styling the application with a focus on rapid development and responsive design.
+* **Axios:** A promise-based HTTP client for making API requests.
+
+## Getting Started
+
+Follow these steps to get the project up and running on your local machine.
+
+### Prerequisites
+
+You need to have Node.js and npm (or yarn) installed.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
