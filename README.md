@@ -17,16 +17,16 @@ This is a web application that interacts with a character list, likely from the 
 ## Key Features
 
 * **Authentication:** A simple login system with predefined user credentials.
-  !(https://placehold.co/1000x500/000000/FFFFFF?text=Login%20Page)
+  !(uploaded:image_8c5627.png-42f865ea-65ed-4728-9ee2-8285717e4bdb)
 
 * **Infinite Scroll:** Efficiently loads character data as the user scrolls, improving performance.
-  !(https://placehold.co/1000x500/000000/FFFFFF?text=Character%20List)
+  !(uploaded:image_8c592a.jpg-7cec5daf-cff8-4541-bfeb-da6714bbad5f)
 
 * **Character Filtering:** Allows users to filter the character list by status, species, and gender.
-  ![Image showing a filter dropdown with options for status, species, and gender](https://placehold.co/1000x500/000000/FFFFFF?text=Filter%20Options)
+  ![Image showing a filter dropdown with options for status, species, and gender](uploaded:image_8c594c.png-4263484a-fd14-4441-974f-ccdfc583370d)
 
 * **User Profile:** A dedicated page to view user details.
-  !(https://placehold.co/1000x500/000000/FFFFFF?text=User%20Profile)
+  !(uploaded:image_8c596b.png-ed17ca3d-4682-4dd4-876f-15e68f29965d)
 
 ## Relevant Technologies
 
@@ -50,6 +50,22 @@ You need to have Node.js and npm (or yarn) installed.
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone <your-repo-url>
+1.  Clone the repository:
+    ```bash
+    git clone <your-repo-url>
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd tekton-challenge
+    ```
+3.  Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+### Running the Application
+
+To start the development server, run the following command:
+
+```bash
+npm run dev
