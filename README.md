@@ -10,6 +10,16 @@ This project is a React application built with Vite, showcasing several key feat
 * [Getting Started](#getting-started)
 * [User Login](#user-login)
 
+## 🚀 Features  
+
+- 🔐 **Authentication** with fake users (see credentials below)  
+- ⚡ **Infinite scroll with virtualization** using [TanStack Virtual](https://tanstack.com/virtual/latest)  
+- ⭐ **Favorites system** persisted with [Zustand](https://github.com/pmndrs/zustand)  
+- 🎨 **Responsive UI** powered by [Tailwind CSS](https://tailwindcss.com/)  
+- 📂 **Data fetching & caching** with [TanStack React Query](https://tanstack.com/query/latest)  
+- 🧪 **Unit & integration tests** with Vitest + React Testing Library  
+- 🗂️ **Feature-based folder structure** for scalability
+
 ## Project Overview
 
 This is a web application that interacts with a character list, likely from the Rick and Morty API, and provides a user profile view. The application includes a login screen and a dashboard with a character list that features infinite scrolling and filtering.
@@ -52,6 +62,9 @@ Follow these steps to get the project up and running on your local machine.
 
 You need to have Node.js and npm (or yarn) installed.
 
+- Node.js v22+  
+- npm or yarn  
+
 ### Installation
 
 1.  Clone the repository:
@@ -64,8 +77,13 @@ You need to have Node.js and npm (or yarn) installed.
     ```
 3.  Install the dependencies:
     ```bash
-    npm install
+    pnpm  install
     ```
+
+3.  Run tests:
+    ```bash
+    pnpm run dev
+   ```
 
 ### Running the Application
 
@@ -77,3 +95,16 @@ npm run dev
 ## Live Demo 🌐
 
 You can view the live demo at: https://addi-crm-nine.vercel.app
+
+
+👤 Test Users
+
+Use the following credentials to log in:
+
+Rick Sanchez
+Email: rick@rick.com
+Password: rick
+
+Morty Smith
+Email: morty@morty.com
+Password: morty
