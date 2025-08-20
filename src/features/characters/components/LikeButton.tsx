@@ -24,6 +24,8 @@ export const LikeButton = ({ characterId, className }: LikeButtonProps) => {
 
   return (
     <Button
+      aria-label="like-button"
+      aria-pressed={isFavorite}
       variant="ghost"
       size="icon"
       onClick={handleClickLike}

@@ -38,7 +38,7 @@ export const LoginForm = (props: React.ComponentProps<"div">) => {
     },
     { success: false }
   );
-  return (
+  return ( 
     <Card className={clsx("overflow-hidden p-0", className)} {...rest}>
       <CardContent className="grid p-0">
         <form
@@ -64,7 +64,7 @@ export const LoginForm = (props: React.ComponentProps<"div">) => {
               />
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="email">Password</Label>
+              <Label htmlFor="password">Password</Label>
               <Input id="password" name="password" type="password" required />
             </div>
 

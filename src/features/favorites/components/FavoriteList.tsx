@@ -10,7 +10,10 @@ export const FavoriteList = () => {
 
   if (!favorites?.length) {
     return (
-      <p className="text-center text-2xl  text-gray-800 dark:text-gray-200 mt-20">
+      <p
+        className="text-center text-2xl  text-gray-800 dark:text-gray-200 mt-20"
+        aria-label="favorites-empty"
+      >
         There no favorites
       </p>
     );
@@ -24,6 +27,7 @@ export const FavoriteList = () => {
           to={`/character/${id}`}
           className="block mb-5 break-inside-avoid rounded-lg overflow-hidden shadow-md"
           title={name}
+          aria-label={`favorite-item-${id}`}
         >
           <img
             src={image}
@@ -33,6 +37,7 @@ export const FavoriteList = () => {
               `w-full object-cover transition-transform duration-200 hover:scale-105`,
               index % 2 ? "h-40 md:h-40" : "h-60 md:h-80"
             )}
+            aria-label={`favorite-image-${id}`}
           />
         </Link>
       ))}

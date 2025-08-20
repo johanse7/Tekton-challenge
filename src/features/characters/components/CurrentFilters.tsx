@@ -14,7 +14,7 @@ export const CurrentFilters = () => {
   if (!searchParams.size) return null;
 
   return (
-    <div className="flex flex-wrap gap-2 animate-fade-in">
+    <div className="flex flex-wrap gap-2 animate-fade-in" aria-label="current-filters">
       {Object.entries(params).map(([key, value]) => (
         <span
           key={key}
