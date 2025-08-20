@@ -50,18 +50,30 @@ export const Detail = () => {
           />
         </div>
         <div className="flex flex-col gap-2 items-start md:col-span-2">
-          <h1 className="text-xl font-bold text-gray-700 dark:text-gray-300 ">
+          <h1
+            className="text-xl font-bold text-gray-700 dark:text-gray-300"
+            aria-label="character-name"
+          >
             {character.name}
           </h1>
           <CharacterStatus status={status} />
-          <p className="text-gray-600 text-sm dark:text-gray-400">
+          <p
+            className="text-gray-600 text-sm dark:text-gray-400"
+            aria-label="character-species"
+          >
             <span className="font-semibold">Species:</span> {species}
           </p>
-          <p className="text-gray-600 text-sm dark:text-gray-400">
+          <p
+            className="text-gray-600 text-sm dark:text-gray-400"
+            aria-label="character-gender"
+          >
             <span className="font-semibold">Gender:</span> {gender}
           </p>
           {type && (
-            <p className="text-gray-600 text-sm dark:text-gray-400">
+            <p
+              className="text-gray-600 text-sm dark:text-gray-400"
+              aria-label="character-type"
+            >
               <span className="font-semibold">Type:</span> {type}
             </p>
           )}

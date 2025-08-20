@@ -4,7 +4,7 @@ import { FavoriteList } from "@/features/favorites/components/FavoriteList";
 export const FavoritesPage = () => {
   return (
     <div className="flex flex-col gap-6">
-      <Title>Your favorite characters</Title>
+      <Title aria-label="favorites-title">Your favorite characters</Title>
       <FavoriteList />
     </div>
   );

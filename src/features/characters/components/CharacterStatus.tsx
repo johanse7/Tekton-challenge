@@ -13,7 +13,10 @@ const statusColors: Record<StatusType, string> = {
 
 export const CharacterStatus = ({ status }: CharacterStatusProps) => {
   return (
-    <div className="inline-flex items-center gap-2">
+    <div
+      className="inline-flex items-center gap-2"
+      aria-label="character-status"
+    >
       <span
         className={clsx(
           `inline-block  w-2 h-2 text-xs font-semibold text-white rounded-full`,
